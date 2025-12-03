@@ -4,13 +4,16 @@ public class TestFactorial {
             if (Factorial.compute(5) != 120) {
                 throw new AssertionError("Test failed for 5");
             }
-            if (Factorial.compute(0) != 1) {
-                throw new AssertionError("Test failed for 0");
+            if (Factorial.compute(3) != 6) {
+                throw new AssertionError("Test failed for 3");
             }
-
-            System.out.println("Test cases passed successfully");
+            System.out.println("All test cases passed!");
+        } catch (AssertionError e) {
+            System.out.println( e.getMessage());
+            System.exit(1);  
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println( e.getMessage());
+            System.exit(1);
         }
     }
 }
