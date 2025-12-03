@@ -5,19 +5,19 @@ pipeline {
 
         stage('Compile') {
             steps {
-                bat 'Javac Factorial.java TestFactorial.java'
+                bat 'javac Factorial.java TestFactorial.java'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'Java TestFactorial.java'
+                bat 'java TestFactorial'
             }
         }
 
         stage('Run') {
             steps {
-                bat 'Java Factorial.java'
+                bat 'java Factorial'
             }
         }
 
