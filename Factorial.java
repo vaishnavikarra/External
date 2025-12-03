@@ -1,19 +1,19 @@
 public class Factorial {
-
     public static long compute(int n) {
-        if (n < 0) {
-            throw new IllegalArgumentException("Negative test cases failed");
+        long fact = 1;
+        if (n == 1 || n == 0) {
+            return fact;
+        } else {
+            // use long for larger results
+            for (int i = 1; i <= n; i++) {
+                fact *= i;
+            }
+            return fact;
         }
-        long result = 1;
-        for (int i = 2; i <= n; i++) {
-            result *= i;   
-        }
-
-        return result;
     }
 
     public static void main(String[] args) {
-        int n = 5;
-        System.out.println("Factorial of " + n + " is " + compute(n));
+        int num = 5; // number to find factorial of
+        System.out.println("Factorial of " + num + " is: " + compute(num));
     }
 }
